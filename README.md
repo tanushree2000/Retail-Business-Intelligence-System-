@@ -1,1 +1,1 @@
-# OptiRetail-Enhancing-Retail-with-Insights-
+# Retail Business Intelligence System  
