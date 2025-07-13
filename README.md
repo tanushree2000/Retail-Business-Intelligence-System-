@@ -26,7 +26,7 @@ A complete cloud-based retail analytics solution using Microsoft Azure and Power
 4. **Visualization**  
    Power BI connects to the SQL database to generate dashboards.
 
-![Architecture Overview](docs/Architecture_Overview_of_Data_Flow_Process.png)
+![Architecture Overview](Architecture Overview of Data Flow Process.png)
 
 ## 📊 Star Schema Model
 
