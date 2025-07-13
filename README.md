@@ -26,7 +26,7 @@ A complete cloud-based retail analytics solution using Microsoft Azure and Power
 4. **Visualization**  
    Power BI connects to the SQL database to generate dashboards.
 
-![Architecture Overview](Architecture Overview of Data Flow Process.png)
+![Architecture Overview](docs/Architecture_Overview_of_Data_Flow_Process.png)
 
 ## 📊 Star Schema Model
 
@@ -60,6 +60,8 @@ From [Instacart Market Basket Analysis - Kaggle]:
 - `aisles.csv`
 
 ## 🔧 ETL Pipeline
+
+![Azure Cloud Data Ingestion](docs/Azure_Cloud_Data_Ingestion_Process.png)
 
 - **LoadDataToStagingPipeline**: Loads CSVs into staging tables
 - **LoadDataToWarehousePipeline**: Triggers stored procedures to load dimensions and fact tables
@@ -117,6 +119,7 @@ From [Instacart Market Basket Analysis - Kaggle]:
 - Improved inventory & campaign planning
 - Clearer customer segmentation for retention
 - Faster reporting cycles with minimal manual work
+
 
 ---
 
