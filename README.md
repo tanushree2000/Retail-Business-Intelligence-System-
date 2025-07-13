@@ -12,21 +12,20 @@ A complete cloud-based retail analytics solution using Microsoft Azure and Power
 - Azure SQL Database
 - Power BI (Reporting and Dashboard)
 
+---
+
 ## 🚀 Data Flow Architecture
 
-1. **Raw Data Ingestion**  
-   CSVs uploaded to Azure Blob Storage.
+1. **Raw Data Ingestion**: CSVs uploaded to Azure Blob Storage  
+2. **Staging**: ADF pipelines load data into staging tables in Azure SQL  
+3. **Transformation**: Stored procedures transform and load data into a Star Schema  
+4. **Visualization**: Power BI connects to the SQL database to generate dashboards
 
-2. **Staging**  
-   ADF pipelines load data into staging tables in Azure SQL.
+<p align="center">
+  <img src="Azure%20Cloud%20Data%20Ingestion%20Process.png" alt="Architecture Overview" width="700">
+</p>
 
-3. **Transformation**  
-   Stored procedures transform and load data into a Star Schema.
-
-4. **Visualization**  
-   Power BI connects to the SQL database to generate dashboards.
-
-![Architecture Overview](Azure%20Cloud%20Data%20Ingestion%20Process.png)
+---
 
 ## 📊 Star Schema Model
 
@@ -38,20 +37,25 @@ A complete cloud-based retail analytics solution using Microsoft Azure and Power
   - DepartmentDimension
   - DayOfWeekDimension
 
-![Star Schema Model](Star%20Schema%20Model%20for%20OptiRetail.png)
+<p align="center">
+  <img src="Star%20Schema%20Model%20for%20OptiRetail.png" alt="Star Schema Model" width="700">
+</p>
 
-### Grain:
-Each row in `OrdersFact` represents one product within a customer order.
+**Grain:** Each row in `OrdersFact` represents one product within a customer order.
+
+---
 
 ## 📅 Key Business Problems Addressed
 
-1. Low customer retention rates
-2. Lack of visibility into product performance
+1. Low customer retention rates  
+2. Lack of visibility into product performance  
 3. Inefficient inventory and operations planning
+
+---
 
 ## 🔢 Dataset Summary
 
-From [Instacart Market Basket Analysis - Kaggle]:
+From *Instacart Market Basket Analysis* (Kaggle):
 - `orders.csv`
 - `order_products__train.csv`
 - `order_products__prior.csv`
@@ -59,9 +63,13 @@ From [Instacart Market Basket Analysis - Kaggle]:
 - `departments.csv`
 - `aisles.csv`
 
+---
+
 ## 🔧 ETL Pipeline
 
-![Azure Cloud Data Ingestion](Azure%20Cloud%20Data%20Ingestion%20Process.png)
+<p align="center">
+  <img src="Azure%20Cloud%20Data%20Ingestion%20Process.png" alt="Azure Cloud Data Ingestion" width="700">
+</p>
 
 - **LoadDataToStagingPipeline**: Loads CSVs into staging tables
 - **LoadDataToWarehousePipeline**: Triggers stored procedures to load dimensions and fact tables
@@ -72,8 +80,13 @@ From [Instacart Market Basket Analysis - Kaggle]:
   - `LoadDepartmentDimension`
   - `LoadOrdersFact`
 
-![SQL Staging Tables I](SQL%20Staging%20tables%20I.png)
-![SQL Staging Tables II](SQL%20Staging%20tables%20II.png)
+<p align="center">
+  <img src="SQL%20Staging%20tables%20I.png" alt="SQL Staging Tables I" width="600">
+  <br>
+  <img src="SQL%20Staging%20tables%20II.png" alt="SQL Staging Tables II" width="600">
+</p>
+
+---
 
 ## 📊 Power BI Dashboards
 
@@ -96,9 +109,14 @@ From [Instacart Market Basket Analysis - Kaggle]:
 - Lifetime value vs reorder frequency
 - Drill-downs on customer-product pairs
 
+---
+
 ## 🔄 Automation & Refresh
+
 - Azure Data Factory pipelines run on schedule
 - Power BI dashboards auto-refresh via Azure SQL connector
+
+---
 
 ## 🚀 Key Outcomes
 
@@ -107,19 +125,16 @@ From [Instacart Market Basket Analysis - Kaggle]:
 - Produce and dairy departments drive most reorders
 - High-value customers are frequent reordering buyers
 
+---
+
 ## 📊 Impact
+
 - Improved inventory & campaign planning
 - Clearer customer segmentation for retention
 - Faster reporting cycles with minimal manual work
 
-## 💼 Contributors
-- Tanushree Poojary
-- Ankita Saha
-- Bhumika
-- Lakshya Mutneja
-
 ---
 
-For visuals, data flow diagrams, and dashboards: check the `docs/` folder or the report `OptiRetail Enhancing Retail with Insights.pdf`.
+For visuals, data flow diagrams, and dashboards: the report `OptiRetail Enhancing Retail with Insights.pdf`.
 
-> Built with Microsoft Azure + Power BI | IS 525 Final Project | Fall 2024
+> Built with Microsoft Azure + Power BI 
