@@ -26,7 +26,7 @@ A complete cloud-based retail analytics solution using Microsoft Azure and Power
 4. **Visualization**  
    Power BI connects to the SQL database to generate dashboards.
 
-![Architecture Overview](docs/Architecture_Overview_of_Data_Flow_Process.png)
+![Architecture Overview](Azure%20Cloud%20Data%20Ingestion%20Process.png)
 
 ## 📊 Star Schema Model
 
@@ -38,7 +38,7 @@ A complete cloud-based retail analytics solution using Microsoft Azure and Power
   - DepartmentDimension
   - DayOfWeekDimension
 
-![Star Schema Model](docs/Star_Schema_Model_for_OptiRetail.png)
+![Star Schema Model](Star%20Schema%20Model%20for%20OptiRetail.png)
 
 ### Grain:
 Each row in `OrdersFact` represents one product within a customer order.
@@ -61,7 +61,7 @@ From [Instacart Market Basket Analysis - Kaggle]:
 
 ## 🔧 ETL Pipeline
 
-![Azure Cloud Data Ingestion](docs/Azure_Cloud_Data_Ingestion_Process.png)
+![Azure Cloud Data Ingestion](Azure%20Cloud%20Data%20Ingestion%20Process.png)
 
 - **LoadDataToStagingPipeline**: Loads CSVs into staging tables
 - **LoadDataToWarehousePipeline**: Triggers stored procedures to load dimensions and fact tables
@@ -72,8 +72,8 @@ From [Instacart Market Basket Analysis - Kaggle]:
   - `LoadDepartmentDimension`
   - `LoadOrdersFact`
 
-![SQL Staging Tables I](docs/SQL_Staging_Tables_I.png)
-![SQL Staging Tables II](docs/SQL_Staging_Tables_II.png)
+![SQL Staging Tables I](SQL%20Staging%20tables%20I.png)
+![SQL Staging Tables II](SQL%20Staging%20tables%20II.png)
 
 ## 📊 Power BI Dashboards
 
@@ -82,27 +82,19 @@ From [Instacart Market Basket Analysis - Kaggle]:
 - Customer lifecycle funnel
 - Reorder patterns
 
-![Customer Behavior Dashboard](docs/Customer_Behavior_Insights.png)
-
 ### 2. Product & Sales Performance
 - Top reordered products
 - Sales by department and aisle
 - Reorders by department
 
-![Product Performance Dashboard](docs/Product_and_Sales_Performance.png)
-
 ### 3. Department & Operational Efficiency
 - Peak order/reorder days
 - Department contribution to orders
-
-![Operational Dashboard](docs/Department_and_Day_Insights.png)
 
 ### 4. Customer & Product Journey
 - Customer segmentation (frequent, occasional, dormant)
 - Lifetime value vs reorder frequency
 - Drill-downs on customer-product pairs
-
-![Customer Journey](docs/Customer_and_Product_Journey.png)
 
 ## 🔄 Automation & Refresh
 - Azure Data Factory pipelines run on schedule
@@ -120,6 +112,11 @@ From [Instacart Market Basket Analysis - Kaggle]:
 - Clearer customer segmentation for retention
 - Faster reporting cycles with minimal manual work
 
+## 💼 Contributors
+- Tanushree Poojary
+- Ankita Saha
+- Bhumika
+- Lakshya Mutneja
 
 ---
 
